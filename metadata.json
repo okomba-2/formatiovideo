@@ -1,0 +1,6 @@
+{
+  "name": "Formation Vidéos Publicitaires avec l'IA",
+  "description": "Apprends à créer des vidéos publicitaires avec l'IA et découvre comment proposer ce service aux entreprises. 4 000 FCFA en offre de lancement.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Formation Vidéos Publicitaires avec l'IA</title>
+<meta name="description" content="Apprends à créer des vidéos publicitaires avec l'IA et découvre comment proposer ce service aux entreprises. 4 000 FCFA en offre de lancement.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Inter:wght@800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#1f4bff;--blue2:#5b8cff;--ink:#0c0d12;--mut:#5b6070;--bg:#fbfbfd;--grey:#f1f3f8;--line:#e4e7ef;--r:18px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;overflow-x:hidden;padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+img,svg,video{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+section{padding:72px 0}
+h1,h2,h3{line-height:1.1;letter-spacing:-.03em;font-weight:800}
+h1{font-family:Inter,Manrope,system-ui,sans-serif;font-size:clamp(2.7rem,10vw,5.4rem);letter-spacing:-.045em;line-height:1.02}
+h1 .it{display:block;font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;font-size:1.14em;letter-spacing:-.02em;line-height:1;margin-top:.04em;background:linear-gradient(100deg,#1f4bff,#4f86ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(1.7rem,4.8vw,2.7rem);max-width:20ch}
+.lead{color:var(--mut);font-size:1.08rem;max-width:56ch;margin-top:16px}
+.grad{background:linear-gradient(100deg,var(--blue),var(--blue2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:14px;font:800 1rem Manrope,system-ui;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.btn-p{background:var(--blue);color:#fff;box-shadow:0 10px 26px -10px rgba(31,75,255,.7)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(31,75,255,.8)}
+.btn-s{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn-s:hover{border-color:var(--blue);color:var(--blue)}
+.btn-big{width:100%;min-height:60px;font-size:1.05rem}
+:focus-visible{outline:3px solid var(--blue2);outline-offset:3px}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(251,251,253,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-weight:800;letter-spacing:-.02em;font-size:1.2rem;line-height:1.1;background:linear-gradient(100deg,var(--ink) 30%,var(--blue) 50%,var(--ink) 70%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s ease-in-out infinite}
+@keyframes shine{0%,100%{background-position:100% 0}50%{background-position:0 0}}.logo b{color:inherit}
+.links{display:none;gap:28px;font-weight:600;color:var(--mut)}
+.links a:hover{color:var(--blue)}
+nav .btn{min-height:42px;padding:0 16px;font-size:.9rem}
+@media(min-width:860px){.links{display:flex}}
+.burger{background:none;border:0;font-size:1.5rem;cursor:pointer;padding:8px}
+@media(min-width:860px){.burger{display:none}}
+.menu{display:none;flex-direction:column;padding:8px 20px 16px;background:#fff;border-bottom:1px solid var(--line)}
+.menu.open{display:flex}.menu a{padding:12px 0;font-weight:600;border-bottom:1px solid var(--grey)}
+/* hero */
+.hero{padding:28px 0 16px;background:radial-gradient(900px 400px at 85% -10%,rgba(91,140,255,.18),transparent 70%)}
+.hero .wrap{display:grid;gap:22px;align-items:center}
+@media(min-width:900px){.hero{padding:36px 0 16px}.hero .wrap>div{max-width:880px}}
+#realisations{padding:10px 0 52px}
+#realisations h2{font-size:clamp(1.4rem,3.6vw,2.2rem)}
+#realisations .rv{opacity:1;transform:none}
+.badge{display:inline-block;background:var(--blue);color:#fff;font-weight:800;font-size:.8rem;letter-spacing:.06em;padding:7px 12px;border-radius:99px;margin-bottom:18px}
+.hero .lead{font-size:1.12rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.cta .btn{flex:1 1 220px}
+.trust{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:16px;color:var(--mut);font-size:.9rem;font-weight:600;list-style:none;padding:0}
+.trust li:before{content:"✓ ";color:var(--blue);font-weight:800}
+/* hero visual */
+.studio{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 60px -30px rgba(20,30,80,.35);padding:12px;position:relative}
+.studio .bar{display:flex;gap:6px;padding:4px 6px 10px}.studio .bar i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.frames{display:grid;grid-template-columns:2fr 1fr;gap:10px}
+.fr{border-radius:12px;aspect-ratio:16/10;background:linear-gradient(135deg,#dfe7ff,#b9ccff);position:relative;overflow:hidden}
+.fr.a{grid-row:span 2;aspect-ratio:auto;min-height:150px;background:linear-gradient(140deg,#1f4bff,#7aa2ff 70%,#cfdcff)}
+.fr.a:after{content:"";position:absolute;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.9);left:50%;top:50%;translate:-50% -50%;box-shadow:0 8px 20px rgba(0,0,0,.2)}
+.fr.a:before{content:"";position:absolute;z-index:2;left:50%;top:50%;translate:-30% -50%;border-left:14px solid var(--blue);border-block:9px solid transparent}
+.fr.b{background:linear-gradient(135deg,#e9eeff,#c7d6ff)}.fr.c{background:linear-gradient(135deg,#0c0d12,#2a3270)}
+.tl{margin-top:12px;background:var(--grey);border-radius:12px;padding:10px;position:relative;overflow:hidden}
+.tr{height:16px;border-radius:5px;margin:5px 0;display:flex;gap:4px}
+.tr span{border-radius:5px;background:#c9d6ff;flex:var(--w)}.tr span.k{background:var(--blue)}.tr span.d{background:#0c0d12}.tr span.g{background:transparent}
+.play{position:absolute;top:0;bottom:0;width:2px;background:var(--blue);left:8%;animation:scan 7s linear infinite}
+.play:before{content:"";position:absolute;top:0;left:-4px;width:10px;height:10px;border-radius:50%;background:var(--blue)}
+@keyframes scan{to{left:96%}}
+.chip{position:absolute;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px;font-weight:800;font-size:.78rem;box-shadow:0 14px 30px -14px rgba(20,30,80,.4)}
+.chip.one{right:-6px;top:-14px}.chip.two{left:-6px;bottom:-14px}
+/* cards */
+.grid{display:grid;gap:16px;margin-top:36px}
+@media(min-width:700px){.grid.c2{grid-template-columns:repeat(2,1fr)}.grid.c4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.grid.c4{grid-template-columns:repeat(4,1fr)}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(20,30,80,.35)}
+.ico{width:44px;height:44px;border-radius:12px;background:#e9eeff;color:var(--blue);display:grid;place-items:center;margin-bottom:16px}
+.card h3{font-size:1.15rem;letter-spacing:-.01em;margin-bottom:8px}.card p{color:var(--mut);font-size:.96rem}
+.alt{background:var(--grey)}
+/* gallery */
+.gal{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;margin:18px -20px 0;padding:4px 20px 14px;scrollbar-width:none}
+.gal::-webkit-scrollbar{display:none}
+.gal>article{flex:0 0 78%;scroll-snap-align:center}
+@media(min-width:900px){.gal{display:grid;grid-template-columns:repeat(3,1fr);margin:20px 0 0;padding:4px 0}.gal>article{flex:none}}
+.pj{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;height:100%;display:flex;flex-direction:column}
+.th{aspect-ratio:16/11;background:linear-gradient(135deg,#e9eeff,#c0d0ff);position:relative;display:grid;place-items:center;cursor:pointer;overflow:hidden}
+.th img{width:100%;height:100%;object-fit:cover;position:absolute}
+.th .ph{font-size:.78rem;font-weight:700;color:var(--blue);background:#fff;padding:5px 10px;border-radius:99px;position:absolute;top:10px;left:10px}
+.th .pl{width:56px;height:56px;border-radius:50%;background:var(--blue);display:grid;place-items:center;color:#fff;position:relative;transition:transform .2s}
+.th:hover .pl{transform:scale(1.1)}
+.pj .in{padding:18px;display:flex;flex-direction:column;gap:4px;flex:1}
+.pj h3{font-size:1.35rem;display:flex;align-items:center;gap:10px}.pj h3 img{height:26px;width:auto}
+.pj small{color:var(--mut);font-weight:600}.pj .btn{margin-top:12px;min-height:44px}
+.note{margin-top:18px;color:var(--mut);font-size:.82rem}
+.tools{margin-top:18px;background:var(--blue);color:#fff;border-radius:var(--r);padding:22px 24px;display:grid;gap:4px}.tools b{font-size:1.2rem;letter-spacing:-.02em}.tools span{opacity:.9}
+/* bonus */
+.bonus{padding:44px 0;border-top:1px solid var(--line)}
+.bonus .wrap{display:flex;gap:24px;align-items:center;max-width:760px}
+.ebook{flex:none;width:clamp(110px,26vw,180px);height:auto;mix-blend-mode:multiply;animation:fl 5s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-8px)}}
+.bonus h3{font-size:1.2rem;letter-spacing:-.02em;margin:6px 0}.bonus p{color:var(--mut);font-size:.95rem}
+.tag{display:inline-block;background:#e9eeff;color:var(--blue);font-weight:800;font-size:.75rem;padding:5px 10px;border-radius:99px}
+/* pricing */
+.price-wrap{display:grid;gap:30px;align-items:start;margin-top:10px}
+.pc{background:#fff;border:2px solid var(--blue);border-radius:26px;padding:28px;box-shadow:0 30px 60px -30px rgba(31,75,255,.5);max-width:560px;width:100%;margin-inline:auto}
+.pc .k{font-weight:800;color:var(--blue);font-size:.85rem;letter-spacing:.06em}
+.pc h3{font-size:1.5rem;margin:8px 0 18px}
+.old{color:var(--mut);text-decoration:line-through;font-weight:600;font-size:1.1rem}
+.now{font-size:clamp(2.6rem,12vw,3.6rem);font-weight:800;letter-spacing:-.04em;color:var(--blue);line-height:1}
+.save{display:inline-block;background:#e9f7ee;color:#127a3a;font-weight:800;font-size:.85rem;padding:5px 10px;border-radius:8px;margin:10px 0}
+.pc ul{list-style:none;padding:0;margin:16px 0 22px;display:grid;gap:10px}
+.pc li{padding-left:28px;position:relative;font-weight:600}
+.pc li:before{content:"✓";position:absolute;left:0;color:#fff;background:var(--blue);width:20px;height:20px;border-radius:50%;font-size:.7rem;display:grid;place-items:center;top:3px}
+.cd{display:flex;gap:8px;margin:14px 0}
+.cd div{flex:1;background:var(--ink);color:#fff;border-radius:12px;text-align:center;padding:10px 4px}
+.cd b{display:block;font-size:1.5rem;font-variant-numeric:tabular-nums;line-height:1.1}.cd span{font-size:.7rem;opacity:.7}
+.small{font-size:.82rem;color:var(--mut);margin-top:10px;text-align:center}
+.ended{background:#fff4f2;color:#b42318;border-radius:10px;padding:10px 12px;font-weight:700;font-size:.9rem;margin:10px 0}
+/* steps */
+.steps{display:grid;gap:22px;margin-top:40px;position:relative}
+.st{display:flex;gap:16px}
+.st .dot{flex:none;width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;z-index:1}
+.st h3{font-size:1.15rem}.st p{color:var(--mut)}
+@media(max-width:859px){.steps:before{content:"";position:absolute;left:23px;top:20px;bottom:20px;width:2px;background:var(--line)}}
+@media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}.st{flex-direction:column}.steps:before{content:"";position:absolute;left:24px;right:24%;top:23px;height:2px;background:linear-gradient(90deg,var(--blue),var(--line))}}
+/* faq */
+details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+summary{cursor:pointer;padding:18px 20px;font-weight:800;list-style:none;display:flex;justify-content:space-between;gap:12px;min-height:56px;align-items:center}
+summary::-webkit-details-marker{display:none}summary:after{content:"+";font-size:1.4rem;color:var(--blue);transition:transform .2s}
+details[open] summary:after{transform:rotate(45deg)}
+details p{padding:0 20px 18px;color:var(--mut)}
+.faq{max-width:760px;margin-top:30px}
+/* final */
+.final{background:radial-gradient(700px 300px at 50% 0,rgba(31,75,255,.45),transparent 70%),#07080c;color:#fff;text-align:center}
+.final h2{margin-inline:auto;max-width:18ch}.final .lead{margin-inline:auto;color:#aab2c8}
+.final .pr{margin:26px 0 20px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap;align-items:baseline}
+.final .pr .old{color:#8a93ab}.final .pr .now{color:#fff;font-size:2.4rem}
+.final .btn{max-width:420px;width:100%}
+.final p.q{margin-top:16px;color:#aab2c8;font-weight:600}
+/* footer */
+footer{padding:48px 0 30px;border-top:1px solid var(--line);color:var(--mut);font-size:.92rem}
+footer .wrap{display:grid;gap:28px}
+@media(min-width:800px){footer .wrap{grid-template-columns:1.4fr 1fr 1fr}}
+footer h4{color:var(--ink);margin-bottom:10px}footer ul{list-style:none;padding:0;display:grid;gap:8px}
+footer a:hover,footer button.l:hover{color:var(--blue)}
+button.l{background:none;border:0;font:inherit;color:inherit;cursor:pointer;padding:0;text-align:left}
+/* sticky buy */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;transition:transform .3s}
+.sticky.hide{transform:translateY(110%)}
+.sticky .p{line-height:1.15}.sticky .p b{font-size:1.25rem;color:var(--blue);display:block}.sticky .p s{font-size:.78rem;color:var(--mut)}
+.sticky .btn{flex:1;min-height:48px}
+@media(min-width:900px){.sticky{display:none}body{padding-bottom:0}}
+/* dialog & toast */
+dialog{border:0;border-radius:20px;padding:0;width:min(860px,94vw);max-height:90vh;overflow:auto}
+dialog::backdrop{background:rgba(5,8,20,.7)}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;font-weight:800}
+.dh button{background:var(--grey);border:0;width:38px;height:38px;border-radius:50%;font-size:1.1rem;cursor:pointer}
+.vid{aspect-ratio:16/9;background:#000;display:grid;place-items:center;color:#fff;text-align:center;padding:20px}
+.vid.v{aspect-ratio:9/16;height:min(78vh,720px);width:auto;max-width:100%;margin:0 auto}
+.vid iframe,.vid video{width:100%;height:100%;border:0}
+.legal{padding:0 22px 24px;color:var(--mut)}
+.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom));translate:-50% 20px;background:var(--ink);color:#fff;padding:12px 18px;border-radius:12px;font-weight:700;font-size:.9rem;opacity:0;pointer-events:none;transition:.3s;z-index:90;width:max-content;max-width:92vw;text-align:center}
+.toast.on{opacity:1;translate:-50% 0}
+.dev{position:fixed;top:70px;right:10px;z-index:70;background:#fff7d6;border:1px solid #f0d36a;color:#6b5400;border-radius:10px;padding:8px 10px;font-size:.72rem;font-weight:700;max-width:230px}
+.dev button{margin-top:6px;font:inherit;font-weight:800;background:#6b5400;color:#fff;border:0;border-radius:6px;padding:5px 8px;cursor:pointer}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">Motion Design <b>IA</b></a>
+    <div class="links">
+      <a href="#formation">La formation</a><a href="#realisations">Mes réalisations</a><a href="#bonus">Le bonus</a><a href="#faq">FAQ</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px">
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">☰</button>
+    </div>
+  </div>
+  <div class="menu" id="menu">
+    <a href="#formation">La formation</a><a href="#realisations">Mes réalisations</a><a href="#bonus">Le bonus</a><a href="#faq">FAQ</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Apprends à créer des <span class="it">vidéos publicitaires avec l'IA.</span></h1>
+      <div class="cta">
+        <a href="#achat" class="btn btn-p">Je découvre la formation</a>
+        <a href="#realisations" class="btn btn-s">Voir mes réalisations</a>
+      </div>
+      <ul class="trust"><li>Une compétence créative à apprendre</li><li>3 outils IA secrets 100 % gratuits</li><li>Un bonus e-book inclus</li><li>Une formation accessible à petit prix</li></ul>
+    </div>
+  </div>
+</header>
+
+<section id="realisations">
+  <div class="wrap">
+    <h2 class="rv">Voici le type de concepts publicitaires que tu peux apprendre à créer.</h2>
+    <p class="lead rv">Découvre quelques-uns de mes concepts vidéo réalisés pour illustrer les possibilités créatives du motion design et de l'intelligence artificielle.</p>
+    <div class="gal" id="gal"></div>
+    <p class="note">Concepts et démonstrations créatives réalisés par mes soins. Ces marques ne sont ni mes clientes, ni mes partenaires, et n'approuvent pas cette formation.</p>
+  </div>
+</section>
+
+<section id="formation" class="alt">
+  <div class="wrap">
+    <h2 class="rv">Développe une nouvelle compétence créative.</h2>
+    <p class="lead rv">Découvre les bases nécessaires pour commencer à concevoir des vidéos publicitaires avec l'aide de l'intelligence artificielle.</p>
+    <div class="grid c4">
+      <div class="card rv"><div class="ico"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V17h6v-.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg></div><h3>Comprendre le processus créatif</h3><p>Découvre les différentes étapes qui permettent de passer d'une idée à un concept publicitaire vidéo.</p></div>
+      <div class="card rv"><div class="ico"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Exploiter l'intelligence artificielle</h3><p>Apprends à intégrer les outils d'IA dans ton processus de création vidéo.</p></div>
+      <div class="card rv"><div class="ico"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3z"/></svg></div><h3>Créer des contenus publicitaires</h3><p>Découvre comment concevoir des vidéos visuelles adaptées à la communication des marques et des entreprises.</p></div>
+      <div class="card rv"><div class="ico"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div><h3>Valoriser ta compétence</h3><p>Comprends comment présenter tes créations et envisager de proposer tes prestations à des entreprises ou à des entrepreneurs.</p></div>
+    </div>
+    <div class="tools rv"><b>3 outils IA secrets, 100 % gratuits</b><span>Dans la formation, tu découvres 3 outils d'intelligence artificielle gratuits que j'utilise pour mes réalisations.</span></div>
+  </div>
+</section>
+
+<section class="bonus" id="bonus">
+  <div class="wrap">
+    <img class="ebook" id="cover" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='640' height='960' viewBox='0 0 640 960'><rect width='640' height='960' fill='%231f4bff' rx='24'/><text x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' fill='%23ffffff' font-family='sans-serif' font-size='42' font-weight='bold'>E-BOOK BONUS</text><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='%23cfe0ff' font-family='sans-serif' font-size='26'>Trouver ses 1ers clients</text></svg>" alt="Couverture de l'e-book bonus" width="640" height="960" loading="lazy">
+    <div>
+      <span class="tag">Bonus inclus avec la formation</span>
+      <h3>Un e-book pour t'aider à rechercher tes premiers clients.</h3>
+      <p>Des conseils et des astuces pour apprendre à identifier des clients potentiels et à présenter tes services. Il ne garantit pas l'obtention de clients.</p>
+    </div>
+  </div>
+</section>
+
+<section id="achat">
+  <div class="wrap">
+    <div class="price-wrap">
+      <div class="pc rv">
+        <div class="k" id="kicker">OFFRE DE LANCEMENT</div>
+        <h3>Passe à la pratique avec la formation Vidéos Publicitaires avec l'IA.</h3>
+        <div id="priceBox"></div>
+        <ul>
+          <li>La formation sur la création de vidéos publicitaires avec l'IA</li>
+          <li>La découverte de 3 outils IA secrets, 100 % gratuits, pour tes réalisations</li>
+          <li>Le bonus e-book pour apprendre à rechercher des clients</li>
+          <li>Un accès aux ressources effectivement comprises dans l'offre</li>
+        </ul>
+        <button class="btn btn-p btn-big js-buy">JE VEUX ACCÉDER À LA FORMATION</button>
+        <p class="small">Paiement disponible partout dans le monde 🌐 : MTN, Wave, Orange Money, Airtel, Moov Money, Visa, MasterCard et bien d'autres.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2 class="rv">Cette formation est faite pour toi si…</h2>
+    <div class="grid c2">
+      <div class="card rv"><h3>Tu veux découvrir</h3><p>Tu veux découvrir la création vidéo avec l'IA.</p></div>
+      <div class="card rv"><h3>Tu veux développer</h3><p>Tu veux développer une compétence créative.</p></div>
+      <div class="card rv"><h3>Tu veux apprendre</h3><p>Tu veux apprendre à concevoir des concepts publicitaires.</p></div>
+      <div class="card rv"><h3>Tu veux explorer</h3><p>Tu souhaites explorer la possibilité de vendre tes services créatifs à des entreprises.</p></div>
+    </div>
+    <p class="lead rv" style="margin-top:28px">Tu n'as pas besoin de te présenter comme un expert pour commencer à apprendre. L'essentiel est de découvrir le processus, de pratiquer et d'améliorer tes créations progressivement.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="rv">Comment ça fonctionne ?</h2>
+    <div class="steps">
+      <div class="st rv"><div class="dot"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/></svg></div><div><h3>Accède à la formation</h3><p>Le visiteur clique sur le bouton d'achat et suit le processus de paiement configuré.</p></div></div>
+      <div class="st rv"><div class="dot"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m10 8 6 4-6 4z"/></svg></div><div><h3>Découvre le contenu</h3><p>Après confirmation du paiement, il accède à la formation selon le système de livraison configuré.</p></div></div>
+      <div class="st rv"><div class="dot"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m12 3 2.6 5.6 6 .7-4.4 4.1 1.2 6L12 16.5 6.6 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></div><div><h3>Mets en pratique</h3><p>Il utilise les connaissances acquises pour développer ses propres créations et améliorer sa pratique.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="faq">
+  <div class="wrap">
+    <h2 class="rv">Questions fréquentes</h2>
+    <div class="faq" id="faqList"></div>
+  </div>
+</section>
+
+<div class="sticky" id="sticky">
+  <div class="p" id="stickyPrice"></div>
+  <a href="#achat" class="btn btn-p">Accéder à la formation</a>
+</div>
+
+<dialog id="dlg"><div class="dh"><span id="dt"></span><button id="dx" aria-label="Fermer">✕</button></div><div id="db"></div></dialog>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ============ CONFIGURATION (à modifier) ============ */
+const PAYMENT_URL = "https://onovxarb.mychariow.co/prd_tgdfvkq9/checkout";
+const PROMO_START_AT = "";          // ex. "2026-10-20T09:00:00+01:00" (heure de Brazzaville). Vide = pas de compte à rebours
+const PROMO_DURATION_HOURS = 72;
+const NORMAL_PRICE = 5000;
+const PROMO_PRICE = 4000;
+/* Réalisations : type "youtube" (id) ou "mp4" (src). thumb = miniature, logo = logo (si tu as les droits). */
+const PROJECTS = [
+  { brand:"MTN",            type:"youtube", id:"54iT42ajCHQ", src:"", thumb:"", logo:"" },
+  { brand:"Izichange",      type:"youtube", id:"e4_GjIEX6GU", src:"", thumb:"", logo:"" },
+  { brand:"Nzoko Transport",type:"youtube", id:"yQzXx5pk9G8", src:"", thumb:"", logo:"" }
+];
+/* ==================================================== */
+
+const LEGAL = {
+  mentions:["Mentions légales","À compléter : éditeur du site, responsable de publication, hébergeur."],
+  privacy:["Politique de confidentialité","À compléter : données collectées, finalités, durée de conservation, droits des utilisateurs."],
+  cgv:["Conditions générales de vente","À compléter : objet, prix, paiement, livraison, propriété intellectuelle."],
+  refund:["Politique de remboursement","À compléter : à définir par le vendeur avant le lancement."],
+  contact:["Contact","À compléter : moyen de contact officiel (e-mail ou WhatsApp)."]
+};
+const FAQ = [
+  ["Que vais-je apprendre ?","Tu découvriras comment utiliser l'intelligence artificielle dans la création de vidéos publicitaires et comment développer une approche créative adaptée aux besoins des entreprises."],
+  ["La formation est-elle adaptée aux débutants ?","La formation s'adresse aux personnes qui souhaitent découvrir ou développer cette compétence. Prends le temps de pratiquer pour progresser."],
+  ["Le bonus est-il inclus ?","Oui, un e-book contenant des conseils et des astuces pour apprendre à rechercher des clients est inclus avec la formation."],
+];
+
+const $ = s => document.querySelector(s);
+const fmt = n => n.toLocaleString("fr-FR").replace(/\u202f/g," ") + " FCFA";
+const payOK = () => PAYMENT_URL && !PAYMENT_URL.startsWith("REMPLACER");
+
+/* ----- état de l'offre (serveur si dispo, sinon config locale) ----- */
+let cfg = { startAt: PROMO_START_AT, hours: PROMO_DURATION_HOURS, normal: NORMAL_PRICE, promo: PROMO_PRICE };
+let offset = 0, server = false, sim = false;
+
+async function loadServer(){
+  try{
+    const c = new AbortController(); setTimeout(()=>c.abort(),2500);
+    const r = await fetch("/api/offer",{signal:c.signal}); if(!r.ok) throw 0;
+    const j = await r.json();
+    cfg = { startAt:j.startAt||"", hours:j.hours, normal:j.normalPrice, promo:j.promoPrice };
+    offset = j.serverTime - Date.now(); server = true;
+  }catch(e){ server = false; }
+}
+function offer(){
+  const now = Date.now()+offset;
+  let st = cfg.startAt ? Date.parse(cfg.startAt) : (offer._st || (offer._st = now));
+  const end = st + cfg.hours*3600e3;
+  if(now < st) return {s:"soon",price:cfg.normal,st};
+  if(now < end) return {s:"live",price:cfg.promo,left:end-now};
+  return {s:"ended",price:cfg.normal};
+}
+
+function render(){
+  const o = offer(), live = o.s==="live";
+  const pad = n => String(n).padStart(2,"0");
+  let h = "";
+  if(live){
+    const t = Math.floor(o.left/1000);
+    h += `<div class="old">${fmt(cfg.normal)}</div><div class="now">${fmt(cfg.promo)}</div>
+      <div class="save">Économise ${fmt(cfg.normal-cfg.promo).replace(" FCFA","")} FCFA pendant l'offre de lancement.</div>
+      <div class="cd" aria-label="Temps restant"><div><b>${pad(Math.floor(t/3600))}</b><span>heures</span></div><div><b>${pad(Math.floor(t%3600/60))}</b><span>min</span></div><div><b>${pad(t%60)}</b><span>sec</span></div></div>
+      <p class="small" style="text-align:left;margin:0 0 6px">Offre valable pendant ${cfg.hours} heures à compter du lancement de la promotion.</p>`;
+  }else{
+    h += `<div class="now">${fmt(cfg.normal)}</div>`;
+    if(o.s==="ended") h += `<div class="ended">L'offre de lancement est terminée.</div>`;
+    else if(o.s==="soon") h += `<p class="small" style="text-align:left">Offre de lancement à ${fmt(cfg.promo)} pendant ${cfg.hours} heures, à partir du ${new Date(o.st).toLocaleString("fr-FR",{dateStyle:"long",timeStyle:"short"})}.</p>`;
+    else h += `<p class="small" style="text-align:left">Offre de lancement à ${fmt(cfg.promo)} pendant ${cfg.hours} heures, bientôt disponible.</p>`;
+  }
+  $("#priceBox").innerHTML = h;
+  $("#kicker").textContent = live ? "OFFRE DE LANCEMENT" : "FORMATION";
+  $("#stickyPrice").innerHTML = live ? `<s>${fmt(cfg.normal)}</s><b>${fmt(cfg.promo)}</b>` : `<b>${fmt(cfg.normal)}</b>`;
+  const f = document.querySelector("#faqPrice");
+  if(f) f.textContent = `Le prix normal est de ${fmt(cfg.normal)}.` + (live ? ` Pendant l'offre de lancement, le tarif est de ${fmt(cfg.promo)} pour une durée de ${cfg.hours} heures à compter du début réel de la promotion.` : ` L'offre de lancement à ${fmt(cfg.promo)} (${cfg.hours} heures) n'est pas active actuellement.`);
+}
+
+/* ----- achat ----- */
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove("on"),4500)}
+async function buy(){
+  if(server){
+    try{
+      const r = await fetch("/api/checkout",{method:"POST"}); const j = await r.json();
+      if(j.url){ location.href = j.url; return; }
+      toast(j.error||"Paiement indisponible pour le moment."); return;
+    }catch(e){}
+  }
+  if(!payOK()){ toast("Mode développement : renseigne PAYMENT_URL (ou les liens de paiement du serveur) pour activer l'achat."); return; }
+  location.href = PAYMENT_URL;
+}
+document.querySelectorAll(".js-buy").forEach(b=>b.addEventListener("click",buy));
+
+/* ----- galerie ----- */
+PROJECTS.forEach(p=>{ if(!p.thumb && p.id) p.thumb = `https://i.ytimg.com/vi/${p.id}/hqdefault.jpg`; });
+$("#gal").innerHTML = PROJECTS.map((p,i)=>`
+<article class="rv"><div class="pj">
+  <div class="th" data-i="${i}" role="button" tabindex="0" aria-label="Lire le concept ${p.brand}">
+    ${p.thumb?`<img src="${p.thumb}" alt="Miniature ${p.brand}" loading="lazy">`:`<span class="ph">Miniature à ajouter</span>`}
+    <span class="pl"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></span>
+  </div>
+  <div class="in"><h3>${p.logo?`<img src="${p.logo}" alt="" loading="lazy">`:""}${p.brand}</h3><small>Concept publicitaire</small>
+  <button class="btn btn-s" data-i="${i}">Découvrir le projet</button></div>
+</div></article>`).join("");
+
+const dlg = $("#dlg");
+function openDlg(title, html){ $("#dt").textContent=title; $("#db").innerHTML=html; dlg.showModal(); }
+function closeDlg(){ $("#db").innerHTML=""; dlg.close(); }
+$("#dx").onclick = closeDlg;
+dlg.addEventListener("click",e=>{ if(e.target===dlg) closeDlg(); });
+dlg.addEventListener("close",()=>{$("#db").innerHTML=""});
+function openProject(i){
+  const p = PROJECTS[i]; let v;
+  if(p.type==="youtube" && p.id) v = `<iframe src="https://www.youtube-nocookie.com/embed/${p.id}?autoplay=1&rel=0" allow="autoplay;encrypted-media;picture-in-picture" allowfullscreen title="${p.brand}"></iframe>`;
+  else if(p.type==="mp4" && p.src) v = `<video src="${p.src}" controls autoplay playsinline preload="metadata"></video>`;
+  else v = `<p>Vidéo à ajouter.<br><small style="opacity:.7">Renseigne PROJECTS[${i}] dans la configuration (YouTube ou MP4).</small></p>`;
+  openDlg(p.brand+" · Concept publicitaire", `<div class="vid${p.type==="youtube"?" v":""}">${v}</div>`);
+}
+$("#gal").addEventListener("click",e=>{ const el=e.target.closest("[data-i]"); if(el) openProject(+el.dataset.i); });
+$("#gal").addEventListener("keydown",e=>{ if(e.key==="Enter"){const el=e.target.closest(".th"); if(el) openProject(+el.dataset.i);} });
+
+/* ----- légal, FAQ, menu, cover ----- */
+document.querySelectorAll("[data-legal]").forEach(b=>b.onclick=()=>{const [t,c]=LEGAL[b.dataset.legal];openDlg(t,`<p class="legal">${c}</p>`)});
+$("#faqList").innerHTML = FAQ.map(([q,a])=>`<details><summary>${q}</summary><p ${a==="@price"?'id="faqPrice"':""}>${a==="@price"?"":a}</p></details>`).join("");
+$("#burger").onclick=()=>{const m=$("#menu"),o=m.classList.toggle("open");$("#burger").setAttribute("aria-expanded",o)};
+document.querySelectorAll("#menu a").forEach(a=>a.onclick=()=>$("#menu").classList.remove("open"));
+
+/* ----- reveal + sticky ----- */
+const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+new IntersectionObserver(es=>$("#sticky").classList.toggle("hide",es[0].isIntersecting),{threshold:.25}).observe($("#achat"));
+
+/* ----- démarrage ----- */
+(async()=>{
+  await loadServer(); render(); setInterval(render,1000);
+})();
+</script>
+</body>
+</html>
