@@ -340,12 +340,24 @@ async function loadServer(){
   }catch(e){ server = false; }
 }
 function offer(){
-  const now = Date.now()+offset;
-  let st = cfg.startAt ? Date.parse(cfg.startAt) : (offer._st || (offer._st = now));
-  const end = st + cfg.hours*3600e3;
-  if(now < st) return {s:"soon",price:cfg.normal,st};
-  if(now < end) return {s:"live",price:cfg.promo,left:end-now};
-  return {s:"ended",price:cfg.normal};
+  const now = Date.now() + offset;
+  const cycleMs = (cfg.hours || 72) * 3600 * 1000;
+  let st = cfg.startAt ? Date.parse(cfg.startAt) : null;
+  if (!st) {
+    try {
+      const stored = localStorage.getItem("promo_timer_start");
+      if (stored) st = parseInt(stored, 10);
+    } catch(e) {}
+    if (!st || isNaN(st)) {
+      st = now;
+      try { localStorage.setItem("promo_timer_start", String(st)); } catch(e) {}
+    }
+  }
+  if (now < st) return {s: "soon", price: cfg.normal, st};
+  const elapsed = (now - st) % cycleMs;
+  let left = cycleMs - elapsed;
+  if (left <= 0) left = cycleMs;
+  return {s: "live", price: cfg.promo, left: left};
 }
 
 function render(){
